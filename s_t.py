@@ -31,7 +31,7 @@ with st.sidebar:
 
 st.write("Toca el Botón y habla lo que quires traducir")
 
-stt_button = Button(label=" Escuchar  🎤", width=300,  height=50)
+stt_button = Button(label=" Reproducir  🎤", width=300,  height=50)
 
 stt_button.js_on_event("button_click", CustomJS(code="""
     var recognition = new webkitSpeechRecognition();
@@ -73,7 +73,7 @@ if result:
         os.mkdir("temp")
     except:
         pass
-    st.title("Texto a Audio")
+    st.title("Audio a Texto/ Audio a Audio")
     translator = Translator()
     
     text = str(result.get("GET_TEXT"))
